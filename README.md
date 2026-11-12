@@ -2,11 +2,11 @@
 
 ## Project Overview
 
-This project explores Ireland's rental market using SQL and Snowflake, focusing on rental price trends, property segmentation, geographic differences, data quality, and statistical outlier investigation.
+This project explores Ireland's rental market using SQL and Snowflake, focusing on rental price trends, property segmentation, geographic differences, data availability, data quality, and statistical outlier investigation.
 
 The goal is to transform raw rental market data into a structured analytical dataset and derive insights that help explain how rental prices have evolved across locations, property types, and bedroom categories.
 
-The project follows a structured data workflow, covering data preparation, transformation, validation, and analytical querying.
+The project follows a structured data workflow, covering data preparation, transformation, validation, and analytical querying through a structured data pipeline.
 
 ## Objectives
 
@@ -15,7 +15,9 @@ The project follows a structured data workflow, covering data preparation, trans
 - Investigate historical rental price movements.
 - Compare rental prices across property types and bedroom categories.
 - Identify geographic differences in rental prices.
+- Analyze data availability across time and property segments.
 - Detect and investigate statistical outliers.
+- Validate year-over-year rental metrics.
 - Document the analytical methodology and validation results.
 
 ## Technology Stack
@@ -42,13 +44,19 @@ The table contains 13 fields covering:
 | Year-over-year metrics | `YOY_CHANGE_EUR`, `YOY_CHANGE_PCT` |
 | Availability | `VALID_OBSERVATIONS` |
 
-The analytical dataset contains 1,367,436 records across 73 quarters, 446 locations, 6 property types, and 7 bedroom categories.
+The analytical dataset contains:
+
+- **1,367,436 records**
+- **73 quarters**
+- **446 locations**
+- **6 property types**
+- **7 bedroom categories**
 
 The time range extends from **2007 Q4 to 2025 Q4**.
 
 ## Data Quality and Validation
 
-Data quality checks were performed to assess null values, duplicate records, dimensional consistency, financial metrics, temporal integrity, and year-over-year calculations.
+Data quality checks were performed to assess null values, duplicate records, dimensional consistency, numerical validity, temporal integrity, previous-year references, and year-over-year calculations.
 
 Key validation results:
 
@@ -57,12 +65,15 @@ Key validation results:
 | Total records | 1,367,436 |
 | Records with rental values | 376,988 |
 | Records without rental values | 990,448 |
-| Duplicate dimensional groups | 0 |
+| Null dimension fields | 0 |
+| Non-positive rental values | 0 |
+| Non-positive previous-year rents | 0 |
+| Duplicate business-key groups | 0 |
 | Invalid quarter codes | 0 |
-| Quarter label mapping mismatches | 0 |
-| Inconsistent dimension mappings | 0 |
-| Inconsistent year-over-year calculations | 0 |
+| Quarter label mismatches | 0 |
+| Inconsistent observation flags | 0 |
 | Previous-year reference mismatches | 0 |
+| Inconsistent YoY calculations | 0 |
 
 The `VALID_OBSERVATIONS` field works as an availability indicator:
 
@@ -71,18 +82,63 @@ The `VALID_OBSERVATIONS` field works as an availability indicator:
 
 The absence of a rental value does not automatically indicate a defective record. It represents unavailable rental observations for a given analytical combination.
 
+### Year-over-Year Validation
+
+Previous-year rental values were checked against the corresponding record for the same location, property type, and bedroom category.
+
+The validation identified:
+
+- 364,547 available previous-year references.
+- Zero unexpected previous-year values.
+- Zero missing expected references.
+- Zero previous-year value mismatches.
+- Zero inconsistencies in YoY EUR and percentage calculations across 338,786 comparable records.
+
+## Data Availability Analysis
+
+Rental value availability varies across historical periods and property segments.
+
+| Metric | Result |
+|---|---:|
+| Records with rental values | 376,988 |
+| Records without rental values | 990,448 |
+| Overall availability | 27.57% |
+| Overall unavailability | 72.43% |
+| Highest annual availability | 31.85% (2015 and 2016) |
+| Availability in 2025 | 16.60% |
+
+The analysis also showed differences in availability across property types and bedroom categories.
+
+Aggregated categories generally have higher availability than several detailed segments. This limitation should be considered when comparing rental trends across time and property groups.
+
 ## Outlier Analysis
 
-A statistical outlier investigation identified **8,608 upper outlier records**.
+A statistical outlier investigation was performed using the Interquartile Range (IQR) method.
+
+The global analysis identified:
+
+| Metric | Result |
+|---|---:|
+| Valid rental records | 376,988 |
+| Upper outliers | 8,608 |
+| Lower outliers | 0 |
+| Upper outlier share | 2.28% |
+| Average upper outlier rent | €2,612.41 |
+| Maximum upper outlier rent | €6,522.48 |
+| Affected locations | 122 |
+| Affected quarters | 73 |
 
 The investigation included:
 
 - Statistical detection of unusually high rental values.
 - Investigation of affected property types and bedroom categories.
-- Assessment of outlier distribution.
+- Analysis of outlier distribution across locations.
+- Historical comparison using global and period-specific IQR thresholds.
 - Reconciliation of category-level counts with the overall outlier total.
 
-The category-level reconciliation matched the total of 8,608 records, with no unexplained difference.
+The analysis showed that detached houses had the highest property-specific outlier share, at 6.43%.
+
+Four-plus-bedroom properties showed the highest bedroom-specific outlier share, at 4.08%.
 
 Outliers were investigated as analytical observations rather than automatically removed from the dataset.
 
@@ -103,7 +159,7 @@ The historical pattern shows:
 
 ### 2. Property Type and Bedroom Segmentation
 
-The segmentation analysis compared 2024 Q4 and 2025 Q4.
+The segmentation analysis compared rental values across property types and bedroom categories.
 
 Among the property-type aggregates, semi-detached houses had the highest average rental value in 2025 Q4, at **€1,771.20**.
 
@@ -143,6 +199,18 @@ Approximately **92.23%** of comparable locations experienced an increase in aver
 
 This indicates that rental growth was geographically widespread across the locations meeting the minimum observation criteria.
 
+### 5. Year-over-Year Rental Changes
+
+Among 338,786 comparable analytical records:
+
+| Change Direction | Records | Share |
+|---|---:|---:|
+| Increase | 238,538 | 70.41% |
+| Decrease | 100,228 | 29.58% |
+| No change | 20 | 0.01% |
+
+The results indicate that most comparable analytical combinations experienced an increase in rental values.
+
 ## Methodological Considerations
 
 The reported rental averages are calculated across available analytical combinations of location, property type, and bedroom category.
@@ -153,12 +221,19 @@ Geographic and property-segment comparisons can also be affected by changes in d
 
 Minimum observation thresholds were applied to improve the reliability of selected geographic comparisons.
 
+Missing rental values were treated as unavailable observations rather than zero values.
+
+Outlier detection was used to identify statistically unusual observations, not to automatically classify records as errors.
+
+Aggregated categories may overlap with detailed categories and should not be summed as independent groups.
+
 ## Repository Structure
 
 ```text
 ireland-rental-market-analysis/
 │
 ├── README.md
+│
 ├── sql/
 │   ├── 01_database_setup/
 │   ├── 02_data_ingestion/
@@ -175,16 +250,24 @@ ireland-rental-market-analysis/
 │   └── methodology.md
 │
 └── results/
-```
+    ├── data_availability_by_property_type.csv
+    ├── data_availability_by_quarter.csv
+    ├── data_availability_by_year.csv
+    ├── location_ranking_2025.csv
+    ├── quarterly_market_trend.csv
+    ├── global_outlier_summary.csv
+    ├── top_outlier_locations.csv
+    ├── annual_global_outlier_trends.csv
+    ├── annual_iqr_comparison.csv
+    ├── property_specific_outliers.csv
+    └── bedroom_specific_outliers.csv
 
-## Project Status
 
-The analytical and validation stages have been completed for the documented checks. The repository is being organized to preserve the SQL workflow, methodology, and findings.
+Project Status
+The analytical and validation stages have been completed for the documented checks.
 
-## Author
-
-**Brenda Espinosa Barros**
+The repository includes SQL scripts, analytical documentation, data quality validation, and selected query results to support reproducibility and transparency.
+Author
+Brenda Espinosa Barros
 
 Data Analytics | SQL | Snowflake | Python | Data Engineering
-
-[GitHub](https://github.com/brendaespinosaa)
