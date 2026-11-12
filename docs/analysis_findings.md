@@ -1,4 +1,3 @@
-
 # Analysis Findings
 
 ## 1. Dataset Overview
@@ -100,7 +99,7 @@ Rental value availability varies considerably across time and property segments.
 
 | Metric | Result |
 |---|---:|
-| Highest yearly availability | 31.85% (2016) |
+| Highest yearly availability | 31.85% (2015 and 2016) |
 | Availability in 2007 | 14.34% |
 | Availability in 2025 | 16.60% |
 
@@ -138,8 +137,10 @@ The Gold dataset was evaluated using structural, numerical, uniqueness, temporal
 | Validation | Result |
 |---|---:|
 | Total records | 1,367,436 |
-| Duplicate business-key groups | 0 |
+| Null dimension fields | 0 |
 | Non-positive rental values | 0 |
+| Non-positive previous-year rents | 0 |
+| Duplicate business-key groups | 0 |
 | Invalid quarter codes | 0 |
 | Quarter label mismatches | 0 |
 | Inconsistent observation flags | 0 |
