@@ -260,7 +260,8 @@ ireland-rental-market-analysis/
     ├── annual_global_outlier_trends.csv
     ├── annual_iqr_comparison.csv
     ├── property_specific_outliers.csv
-    └── bedroom_specific_outliers.csv ```
+    └── bedroom_specific_outliers.csv
+```
 
 Project Status
 The analytical and validation stages have been completed for the documented checks.
