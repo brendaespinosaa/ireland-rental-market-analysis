@@ -1,0 +1,210 @@
+LOCATION_CODE,LOCATION,VALID_RECORDS,AVG_RENT
+120700,"Blackrock, Dublin",21,2872.88
+126200,"Ballsbridge, Dublin 4",19,2628.75
+121200,"Dalkey, Dublin",10,2592.84
+121500,"Glenageary, Dublin",8,2588.72
+121700,"Killiney, Dublin",11,2534.86
+123200,"Stillorgan, Dublin",13,2522.45
+134400,"Churchtown, Dublin 14",8,2496.53
+126300,"Donnybrook, Dublin 4",16,2491.82
+126800,"Sandymount, Dublin 4",16,2490.2
+126600,"Pembroke, Dublin 4",8,2476.46
+122100,"Malahide, Dublin",15,2425.13
+123700,"Spencer Dock, Dublin 1",8,2412.72
+121600,"Howth, Dublin",10,2346.19
+136600,"Dundrum, Dublin 16",12,2333.34
+134500,"Clonskeagh, Dublin 14",8,2315.33
+126500,"Merrion, Dublin 4",10,2313.86
+170500,"Greystones, Wicklow",11,2286.48
+120500,Dublin,41,2269.17
+136800,"Rathfarnham, Dublin 16",16,2262.49
+121400,"Dun Laoghaire, Dublin",19,2259.42
+138600,"Sandyford, Dublin 18",11,2247.94
+128000,"Milltown, Dublin 6",10,2226.37
+121900,"Lucan, Dublin",20,2224.3
+126700,"Ringsend, Dublin 4",11,2216.4
+135400,"Castleknock, Dublin 15",15,2183.25
+128100,"Ranelagh, Dublin 6",18,2151.39
+137900,"Cabinteely, Dublin 18",8,2142.96
+113800,"Bishopstown, Cork",5,2142.44
+138300,"Leopardstown, Dublin 18",11,2141.49
+127900,"Harolds Cross, Dublin 6",9,2135.58
+123500,"I.F.S.C., Dublin 1",10,2128.62
+138000,"Carrickmines, Dublin 18",8,2101.16
+136500,"Ballinteer, Dublin 16",7,2097.31
+133000,"Drimnagh, Dublin 12",10,2063.73
+122400,"Portmarnock, Dublin",8,2059.85
+139700,"Citywest, Dublin 24",11,2059.81
+131600,"Santry, Dublin 9",12,2059.33
+127500,"Raheny, Dublin 5",12,2055.42
+129000,"Terenure, Dublin 6W",18,2052.45
+132900,"Crumlin, Dublin 12",11,2027.77
+130400,"Islandbridge, Dublin 8",10,2027.47
+124900,"Townsend Street, Dublin 2",6,2027.16
+125300,"Clontarf, Dublin 3",17,2017.05
+135600,"Clonsilla, Dublin 15",13,2014.49
+131200,"Beaumont, Dublin 9",6,2010.17
+129700,"Smithfield, Dublin 7",10,2005.5
+138900,"Stepaside, Dublin 18",8,1975.47
+125500,"East Wall, Dublin 3",14,1970.07
+123300,"Swords, Dublin",20,1969.97
+122700,"Saggart, Dublin",9,1957.72
+132300,"Finglas, Dublin 11",14,1957.66
+131500,"Glasnevin, Dublin 9",16,1955.62
+124600,"Pearse Street, Dublin 2",6,1950.14
+122200,"Monkstown, Dublin",9,1943.38
+130300,"Inchicore, Dublin 8",13,1942.6
+135100,"Ashtown, Dublin 15",8,1941.53
+123600,"Parnell Street, Dublin 1",8,1929.11
+135200,"Blanchardstown, Dublin 15",9,1922.22
+145700,"Maynooth, Kildare",18,1917.06
+145900,"Naas, Kildare",19,1914.96
+136200,"Royal Canal Park, Dublin 15",10,1902.97
+133900,"Clongriffin, Dublin 13",10,1902.17
+128300,"Rathmines, Dublin 6",18,1894.81
+122900,"Shankill, Dublin",6,1886.66
+151000,"Castletroy, Limerick",20,1875.12
+129800,"Stoneybatter, Dublin 7",8,1864.92
+129500,"North Circular Road, Dublin 7",5,1862.24
+125400,"Drumcondra, Dublin 3",19,1856.79
+137500,"Malahide Road, Dublin 17",8,1852.66
+123000,"Skerries, Dublin",8,1851.54
+144900,"Celbridge, Kildare",12,1851.49
+140100,"Tallaght, Dublin 24",17,1848.4
+130100,"Cork Street, Dublin 8",8,1837.5
+130500,"Kilmainham , Dublin 8",10,1830.14
+139400,"Clondalkin, Dublin 22",17,1828.91
+116800,"Kinsale, Cork",11,1813.72
+157200,"Drogheda, Meath",10,1812.31
+130000,"Christchurch, Dublin 8",6,1797.64
+139200,"Chapelizod, Dublin 20",7,1787.48
+157400,"Dunboyne, Meath",6,1786.82
+141600,Galway City,31,1775.36
+145600,"Leixlip, Kildare",11,1768.92
+133100,"Kimmage, Dublin 12",8,1761.94
+158300,"Ratoath, Meath",6,1761.3
+130700,"Rialto, Dublin 8",10,1759.66
+122500,"Rathcoole, Dublin",7,1756.82
+140800,"Barna, Galway",5,1745.31
+156700,"Ashbourne, Meath",9,1744.94
+157500,"Dunshaughlin, Meath",8,1741.68
+130800,"South Circular Road, Dublin 8",15,1738.38
+121300,"Donabate, Dublin",8,1738.31
+123800,"Summerhill, Dublin 1",8,1738.13
+132000,"Cherry Orchard, Dublin 10",6,1736.63
+115200,Cork City,37,1725.94
+151400,"Dooradoyle, Limerick",14,1716.96
+170200,"Delgany, Wicklow",6,1716.29
+128200,"Rathgar, Dublin 6",14,1708.39
+120600,"Balbriggan, Dublin",18,1698.35
+169300,Wicklow,34,1682.77
+151900,Limerick City,32,1655.05
+140900,"Bohermore, Galway",5,1650.57
+114000,"Blackrock, Cork",9,1649.67
+166800,"Templars Hall, Waterford",7,1644.88
+144600,Kildare,34,1641.71
+125700,"Fairview, Dublin 3",13,1636.17
+170000,"Bray, Wicklow",20,1592.69
+141400,"Doughiska, Galway",8,1590.36
+125200,"Clonliffe, Dublin 3",8,1588.87
+129300,"Cabra, Dublin 7",14,1586.99
+114300,"Carrigaline, Cork",7,1581
+113100,"Ballincollig, Cork",14,1577.26
+145000,"Clane, Kildare",8,1576.37
+171200,Wicklow Town,9,1564.11
+140200,Galway,36,1557.37
+150100,Limerick,36,1529.56
+157000,"Bettystown, Meath",9,1526.86
+114100,"Blarney, Cork",5,1526.26
+146300,"Sallins, Kildare",8,1508.03
+113000,Cork,39,1495.97
+145200,"Kilcock, Kildare",8,1489.8
+156600,Meath,34,1481.74
+154000,"Drogheda, Louth",21,1465.89
+158100,"Navan, Meath",20,1431.67
+153300,Louth,31,1430.32
+145400,Kildare Town,12,1430.15
+146000,"Newbridge, Kildare",15,1423.25
+169400,"Arklow, Wicklow",16,1418.52
+151300,"Dock Road, Limerick",8,1414.16
+168900,"Gorey, Wexford",15,1410.39
+158700,"Trim, Meath",8,1390.94
+142500,"Oranmore, Galway",8,1384.04
+117100,"Midleton, Cork",17,1380.26
+140300,"Athenry, Galway",8,1375.61
+154200,"Dundalk, Louth",26,1370.76
+141700,"Gort, Galway",5,1352.69
+110200,Carlow Town,20,1347.66
+167100,Waterford City,21,1343.68
+144700,"Athy, Kildare",11,1335.71
+156500,"Westport, Mayo",12,1328.68
+143200,"Tuam, Galway",14,1326.82
+167400,"Athlone, Westmeath",19,1320.94
+144000,"Killarney, Kerry",20,1319.62
+148800,"Portlaoise, Laois",17,1313.78
+110000,Carlow,23,1303.85
+160100,"Tullamore, Offaly",16,1298.01
+165400,"Inner Ring Road, Waterford",6,1283.51
+147600,Laois,23,1272.26
+155500,"Castlebar, Mayo",18,1272.12
+142000,"Loughrea, Galway",11,1258.46
+164000,Waterford,26,1256.6
+144500,"Tralee, Kerry",24,1244.82
+114800,"Clonakilty, Cork",9,1242.12
+166900,"Tramore, Waterford",6,1238.8
+157700,"Kells, Meath",9,1235.59
+117000,"Mallow, Cork",16,1230.01
+111900,"Ennis, Clare",21,1224.11
+167300,Westmeath,31,1223.79
+168100,"Mullingar, Westmeath",19,1222.86
+113500,"Bandon, Cork",14,1216.12
+116900,"Macroom, Cork",5,1214.4
+164800,"Dungarvan, Waterford",13,1208.7
+111100,Cavan Town,18,1204.25
+159400,Offaly,25,1195.94
+156800,"Athboy, Meath",5,1191.09
+140400,"Ballinasloe, Galway",11,1187.38
+115000,"Cobh, Cork",11,1184
+112700,"Shannon, Clare",11,1181.8
+111600,Clare,28,1174.64
+153100,Longford Town,13,1166.07
+168200,Wexford,33,1164.53
+146500,Kilkenny,22,1164.13
+116100,"Fermoy, Cork",7,1159.83
+159900,"Edenderry, Offaly",7,1156.14
+163100,"Clonmel, Tipperary",21,1148.64
+143500,Kerry,32,1146.63
+161200,Sligo,28,1143.11
+162200,Sligo Town,18,1138.72
+159000,"Carrickmacross, Monaghan",8,1138.67
+152400,Longford,22,1126.37
+120000,"Letterkenny, Donegal",22,1125.33
+163400,"Nenagh, Tipperary",17,1118.98
+118800,"Youghal, Cork",7,1103.11
+163000,"Cashel, Tipperary",9,1095.44
+152000,"Newcastle West, Limerick",7,1091.43
+110550,Cavan,27,1088.59
+160200,Roscommon,25,1084.33
+169100,"New Ross, Wexford",16,1084.12
+161000,Roscommon Town,10,1078.96
+113600,"Bantry, Cork",6,1073.06
+155700,"Claremorris, Mayo",8,1072.35
+154900,Mayo,33,1071.28
+168600,"Enniscorthy, Wexford",16,1066.28
+149300,"Carrick-On-Shannon, Leitrim",8,1061.84
+159100,"Castleblayney, Monaghan",11,1059.85
+163800,"Thurles, Tipperary",15,1050.38
+152500,"Ballymahon, Longford",8,1048.01
+159600,"Birr, Offaly",10,1040.2
+148700,"Portarlington, Laois",7,1039.11
+155200,"Ballinrobe, Mayo",6,1033.79
+162500,Tipperary,34,1022.04
+149100,Leitrim,19,1017.93
+118200,"Skibbereen, Cork",6,1016.61
+159300,Monaghan Town,16,1001.49
+158800,Monaghan,28,998.36
+155100,"Ballina, Mayo",18,997.15
+160800,"Castlerea, Roscommon",6,971.55
+119400,"Buncrana, Donegal",7,946.18
+163900,Tipperary Town,9,935.41
+118900,Donegal,32,917.4
