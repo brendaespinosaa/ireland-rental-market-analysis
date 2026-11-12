@@ -1,0 +1,41 @@
+
+-- ============================================================
+-- PROJECT: Ireland Rental Market Analysis
+-- SCRIPT: 06_gold_data_inspection.sql
+-- PURPOSE: Inspect analytical records and derived metrics in Gold
+-- PLATFORM: Snowflake
+-- ============================================================
+
+USE WAREHOUSE SNOWFLAKE_LEARNING_WH;
+USE DATABASE GLOBAL_TRADE_DB;
+
+-- 1. Inspect records with available current and previous-year rents
+SELECT
+    QUARTER_CODE,
+    QUARTER,
+    LOCATION_CODE,
+    LOCATION,
+    PROPERTY_TYPE,
+    BEDROOM,
+    RENT_VALUE,
+    PREVIOUS_YEAR_RENT,
+    YOY_CHANGE_EUR,
+    YOY_CHANGE_PCT,
+    VALID_OBSERVATIONS
+FROM GOLD.RENT_ANALYTICS
+WHERE RENT_VALUE IS NOT NULL
+  AND PREVIOUS_YEAR_RENT IS NOT NULL
+ORDER BY QUARTER_CODE DESC
+LIMIT 15;
+
+
+-- 2. Analyze availability of analytical metrics
+SELECT
+    COUNT(*) AS TOTAL_RECORDS,
+    COUNT(RENT_VALUE) AS VALID_RENT_RECORDS,
+    COUNT(PREVIOUS_YEAR_RENT) AS AVAILABLE_PREVIOUS_YEAR_RENT,
+    COUNT(YOY_CHANGE_EUR) AS AVAILABLE_YOY_EUR,
+    COUNT(YOY_CHANGE_PCT) AS AVAILABLE_YOY_PCT,
+    COUNT_IF(VALID_OBSERVATIONS = 1) AS VALID_OBSERVATION_ROWS,
+    COUNT_IF(VALID_OBSERVATIONS = 0) AS UNAVAILABLE_OBSERVATION_ROWS
+FROM GOLD.RENT_ANALYTICS;
